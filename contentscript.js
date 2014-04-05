@@ -5,6 +5,6 @@ if (matches) {
     console.log("hi " + matches[i]);
   }
   // mess with the page:
-  $("p").hide({"duration":4000});
+  $("p").hide(400, function(){$(this).show(400)});
   // document.body.style.backgroundColor="red";
 }

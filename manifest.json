@@ -1,11 +1,25 @@
 {
   "name": "BitChrome",
   "description": "Allows to quickly get information on Bitoin addresses in any Webpage",
-  "version": "0.1",
-  "app": {
-    "background": {
-      "scripts": ["background.js"]
-    }
+  "version" : "1.0.1",
+  "background" : {
+    "scripts": ["background.js"]
   },
-  "icons": { "16": "crypto-16.png", "128": "crypto-128.png" }
+  "icons" : {
+    "16" : "sandwich-16.png",
+    "48" : "sandwich-48.png",
+    "128" : "sandwich-128.png"
+  },
+  "content_scripts" : [
+    {
+      "matches" : [ 
+         "http://*/*",
+         "https://*/*"
+      ],
+      "js" : [ "contentscript.js" ],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ],
+  "manifest_version": 2
 }

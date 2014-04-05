@@ -1,6 +1,6 @@
 {
-  "name": "Crypto Donations",
-  "description": "This is a simple chrome extension to enable micro-donations in different crypto-currencies like Bitcoin or Dogecoin with a simple sytax in any blog or website: #DONATE#[DOGE][DP875D1fhq76trrZ9dxvt5tjQjKEB4FXVg](100)",
+  "name": "BitChrome",
+  "description": "Allows to quickly get information on Bitoin addresses in any Webpage",
   "version": "0.1",
   "app": {
     "background": {

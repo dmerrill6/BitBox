@@ -5,11 +5,6 @@ if (matches) {
     console.log("hi " + matches[i]);
   }
   // mess with the page:
-  document.body.style.backgroundColor="red";
-
-  // with manifest containing "permissions" : [ "infobars" ],
-  // var payload = {
-  //   count: matches.length    // Pass the number of matches back.
-  // };
-  // chrome.extension.sendRequest(payload, function(response) {});
+  $("p").hide({"duration":4000});
+  // document.body.style.backgroundColor="red";
 }

@@ -1,6 +1,6 @@
 {
   "name": "BitChrome",
-  "description": "This Chrome extension lets you easily check information about bitcoin addresses by right-clicking them and enables micro-donations anywhere by using the following syntax: #DONATE# DP875D1fhq76trrZ9dxvt5tjQjKEB4FXVg 100",
+  "description": "Allows to quickly get information on Bitcoin addresses in any Webpage",
   "version": "0.1",
   "app": {
     "background": {

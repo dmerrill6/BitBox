@@ -1,17 +1,26 @@
 {
   "name": "BitChrome",
-  "description": "Allows to quickly get information on Bitcoin addresses in any Webpage",
-  "version": "0.1",
-  "app": {
-    "background": {
-      "scripts": ["background.js"]
-    }
+  "description": "Allows to quickly get information on Bitoin addresses in any Webpage",
+  "version" : "1.0.1",
+  "background" : {
+    "scripts": ["background.js"]
   },
-  "content_scripts": [
-	  {
-	  	"matches": ["<all_urls>"],
-	  	"js": ["jquery.js", "content.js"]
-	  }
+  "icons" : {
+    "16" : "sandwich-16.png",
+    "48" : "sandwich-48.png",
+    "128" : "sandwich-128.png"
+  },
+
+  "content_scripts" : [
+    {
+      "matches" : [ 
+         "http://*/*",
+         "https://*/*"
+      ],
+      "js" : [  "jquery.js", "content.js" ],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
   ],
-  "icons": { "16": "crypto-16.png", "128": "crypto-128.png" }
+  "manifest_version": 2
 }

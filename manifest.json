@@ -6,26 +6,31 @@
   "background" : {
     "scripts": ["background.js"]
   },
+  "web_accessible_resources": [
+    "bitchrome-address.png"
+  ],
   "icons" : {
-    "16" : "sandwich-16.png",
-    "48" : "sandwich-48.png",
-    "128" : "sandwich-128.png"
+    "16" : "bitchrome-16.png",
+    "48" : "bitchrome-48.png",
+    "128" : "bitchrome-128.png"
   },
 
   "content_scripts" : [
-    {
-      "matches" : [ 
-         "http://*/*",
-         "https://*/*"
+  {
+    "matches" : [ 
+      "http://*/*",
+      "https://*/*"
+    ],
+    "js" : ["bitcore.js","jquery-1.11.0.min.js",
+      "jquery.qtip.min.js",
+      "jquery.qrcode-0.7.0.min.js",
+      "contentscript.js" ,
+      "content.js"
       ],
-
-      "js" : ["bitcore.js","jquery-1.11.0.min.js",
-              	"jquery.qtip.min.js",
-              	"jquery.qrcode-0.7.0.min.js",
-               "contentscript.js",
-               "content.js"  ],
-      "css" : ["jquery.qtip.min.css",
-      			"bitchrome.css"],
+      "css" : [
+        "jquery.qtip.min.css",
+        "bitchrome.css"
+      ],
       "run_at" : "document_idle",
       "all_frames" : false
     }

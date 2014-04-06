@@ -19,8 +19,10 @@
       ],
 
       "js" : [ "jquery-1.11.0.min.js",
-               "contentscript.js",
-               "content.js" ],
+              	"jquery.qtip.min.js",
+               "content.js", 
+               "contentscript.js" ],
+      "css" : ["jquery.qtip.min.css"],
       "run_at" : "document_idle",
       "all_frames" : false
     }

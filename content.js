@@ -1,42 +1,34 @@
-
-function getAddressInformation(bitcoinAddress, callbackFunction){
-	//Use insight.is web services to get the information
-	var url = "http://live.insight.is/api/addr/" + bitcoinAddress;
-	//send ajax request
-	$.ajax({
-		type: "GET", 
-		url: url,
-	}).done(function(response){
-		 callbackFunction(response);
-	});
-}
-
 function addTooltip(target, bitcoinAddress){
-	target.mouseenter(function (e) { //event fired when mouse cursor enters target
-	    var $x = e.pageX - this.offsetLeft; //get mouse X coordinate relative to target element
- 		if(target.attr('tooltipappended') != 'true')
-        	$(this).append('<div class="tooltip"></div>'); //append tooltip markup
- 		target.attr('tooltipappended', 'true');
+		target.qtip({
+		    content: {
+		        text: function(event, api) {
+		            $.ajax({
+		                url: "http://live.insight.is/api/addr/" + bitcoinAddress, // URL to the JSON file
+		                type: 'GET', // POST or GET
+		                dataType: 'json' // Tell it we're retrieving JSON
+		            })
+		            .then(function(data) {
+		                /* Process the retrieved JSON object
+		                 *    Retrieve a specific attribute from our parsed
+		                 *    JSON string and set the tooltip content.
+		                 */
+		                var content = 'Balance: ' + data.balance + 
+		                '<br/>Total Received: ' + data.totalReceived +
+		                '<br/>Total Sent: ' + data.totalSent +
+		                '<br/>Total Transactions: ' + data.txApperances;
 
- 		//Function to insert content in the tooltip
- 		function setContent(msg){
-			console.log(msg);
-			
-			$('.tooltip').append(msg);
+		                console.log(data);
+		                // Now we set the content manually (required!)
+		                api.set('content.text', content);
+		            }, function(xhr, status, error) {
+		                // Upon failure... set the tooltip content to the status and error value
+		                api.set('content.text', status + ': ' + error);
+		            });
 
-		}
-		//Get bitcoin address information
-		getAddressInformation(bitcoinAddress, setContent);
- 
-        $("a > div.tooltip.center").css("left", "" + $x - 103 + "px"); //set tooltip position from left
-        $("a > div.tooltip.left").css("left", "" + $x + "px"); //set tooltip position from left
-        $("a > div.tooltip.right").css("left", "" + $x - 208 + "px"); //set tooltip position from left
- 
-        $("a > div.tooltip").fadeIn(300); //display, animate and fade in the tooltip
-	});
-	target.mouseleave(function (e){
-		$("a > div.tooltip").hide(); //fadeout the tooltip
-	});
+		            return 'Loading...'; // Set some initial loading text
+		        }
+		    }
+		});
 }
 
 var target = $('a');

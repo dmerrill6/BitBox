@@ -5,9 +5,7 @@ var regexBTC = /[13][^ ^\>^\<]{33}/gi; //bitcoin address candidate
 b = b.replace(regexNonTag, function(m1) {
 		return m1.replace(regexBTC, function(m2) {
 			var addressCandidate =  new Address(m2);
-			console.log(addressCandidate);
 		    if (addressCandidate.isValid()) {
-  				console.log("is address. m2 is " + m2);
   				return m2 + "<div class='bitchrome-address' address='"+ m2 + "'/>";
           var imgURL = chrome.extension.getURL("bitchrome-address.png");
           $('.bitchrome-address').css('background-image', 'url(' + imgURL + ')'); 

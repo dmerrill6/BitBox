@@ -36,6 +36,7 @@ function addTooltip(target, bitcoinAddress){
 						render: 'div',
 						width: 100,
 						height: 100,
+						background: '#FFF',
 						text: bitcoinAddress
 					});
 		        }

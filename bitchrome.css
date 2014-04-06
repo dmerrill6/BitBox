@@ -1,7 +1,9 @@
 .bitchrome-address{
 	background-image: url('chrome-extension://__MSG_@@extension_id__/bitchrome-address.png');
+background-size:16px 16px;
 	width: 16px;
-	height: 23px;
+	height: 16px;
+	margin: 4px;
 	display: inline-block;
 
 }

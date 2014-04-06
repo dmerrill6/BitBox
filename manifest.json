@@ -7,25 +7,26 @@
     "scripts": ["background.js"]
   },
   "icons" : {
-    "16" : "sandwich-16.png",
-    "48" : "sandwich-48.png",
-    "128" : "sandwich-128.png"
+    "16" : "bitchrome-16.png",
+    "48" : "bitchrome-48.png",
+    "128" : "bitchrome-128.png"
   },
 
   "content_scripts" : [
-    {
-      "matches" : [ 
-         "http://*/*",
-         "https://*/*"
+  {
+    "matches" : [ 
+      "http://*/*",
+      "https://*/*"
+    ],
+    "js" : ["bitcore.js","jquery-1.11.0.min.js",
+      "jquery.qtip.min.js",
+      "jquery.qrcode-0.7.0.min.js",
+      "content.js", 
+      "contentscript.js" ],
+      "css" : [
+        "jquery.qtip.min.css",
+        "bitchrome.css"
       ],
-
-      "js" : ["bitcore.js","jquery-1.11.0.min.js",
-              	"jquery.qtip.min.js",
-              	"jquery.qrcode-0.7.0.min.js",
-               "content.js", 
-               "contentscript.js" ],
-      "css" : ["jquery.qtip.min.css",
-      			"bitchrome.css"],
       "run_at" : "document_idle",
       "all_frames" : false
     }

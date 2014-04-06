@@ -12,12 +12,13 @@ function addTooltip(target, bitcoinAddress){
 		                 *    Retrieve a specific attribute from our parsed
 		                 *    JSON string and set the tooltip content.
 		                 */
+		                //QR Code
+		                
 		                var content = 'Balance: ' + data.balance + 
 		                '<br/>Total Received: ' + data.totalReceived +
 		                '<br/>Total Sent: ' + data.totalSent +
 		                '<br/>Total Transactions: ' + data.txApperances;
-
-		                console.log(data);
+		                console.log($(this));
 		                // Now we set the content manually (required!)
 		                api.set('content.text', content);
 		            }, function(xhr, status, error) {
@@ -27,10 +28,24 @@ function addTooltip(target, bitcoinAddress){
 
 		            return 'Loading...'; // Set some initial loading text
 		        }
+		    },
+		    events: {
+		        render: function(event, api) {
+		            // Grab the content
+		            var tooltip = api.elements.tooltip;
+		    		tooltip.qrcode({
+						render: 'div',
+						width: 100,
+						height: 100,
+						text: bitcoinAddress
+					});
+		        }
 		    }
 		});
+
 }
 
 var target = $('a');
 var address = "1C42E62XCkG6WtZ1y1YVVbxQTNn7kHXU6K";
 addTooltip(target, address);
+

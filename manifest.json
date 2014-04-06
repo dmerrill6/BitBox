@@ -20,10 +20,10 @@
 
       "js" : [ "jquery-1.11.0.min.js",
               	"jquery.qtip.min.js",
+              	"jquery.qrcode-0.7.0.min.js",
                "content.js", 
                "contentscript.js" ],
       "css" : ["jquery.qtip.min.css",
-      			"qrcode.min.js",
       			"bitchrome.css"],
       "run_at" : "document_idle",
       "all_frames" : false

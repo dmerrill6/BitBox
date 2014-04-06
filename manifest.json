@@ -18,7 +18,7 @@
          "https://*/*"
       ],
 
-      "js" : [ "jquery-1.11.0.min.js",
+      "js" : ["bitcore.js","jquery-1.11.0.min.js",
               	"jquery.qtip.min.js",
                "content.js", 
                "contentscript.js" ],

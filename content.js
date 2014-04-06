@@ -45,7 +45,9 @@ function addTooltip(target, bitcoinAddress){
 
 }
 
-var target = $('a');
-var address = "1C42E62XCkG6WtZ1y1YVVbxQTNn7kHXU6K";
-addTooltip(target, address);
+var target = $('.bitchrome-address');
+target.each(function(){
+	currentTarget = $(this);
+	addTooltip(this, this.attr('address'));
+});
 

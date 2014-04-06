@@ -2,6 +2,7 @@
   "name": "BitChrome",
   "description": "Allows to quickly get information on Bitoin addresses in any Webpage",
   "version" : "1.0.1",
+  "permissions": ["http://live.insight.is/"],
   "background" : {
     "scripts": ["background.js"]
   },

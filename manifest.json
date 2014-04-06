@@ -19,7 +19,8 @@
       ],
 
       "js" : [ "jquery-1.11.0.min.js",
-               "contentscript.js", "content.js" ],
+               "contentscript.js",
+               "content.js" ],
       "run_at" : "document_idle",
       "all_frames" : false
     }

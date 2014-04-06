@@ -23,7 +23,8 @@
                "content.js", 
                "contentscript.js" ],
       "css" : ["jquery.qtip.min.css",
-      			"qrcode.min.js"],
+      			"qrcode.min.js",
+      			"bitchrome.css"],
       "run_at" : "document_idle",
       "all_frames" : false
     }

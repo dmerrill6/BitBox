@@ -18,7 +18,6 @@ function addTooltip(target, bitcoinAddress){
 		                '<br/>Total Received: ' + data.totalReceived +
 		                '<br/>Total Sent: ' + data.totalSent +
 		                '<br/>Total Transactions: ' + data.txApperances;
-		                console.log($(this));
 		                // Now we set the content manually (required!)
 		                api.set('content.text', content);
 		            }, function(xhr, status, error) {
@@ -48,6 +47,6 @@ function addTooltip(target, bitcoinAddress){
 var target = $('.bitchrome-address');
 target.each(function(){
 	currentTarget = $(this);
-	addTooltip(this, this.attr('address'));
+	addTooltip(currentTarget, currentTarget.attr('address'));
 });
 

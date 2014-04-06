@@ -14,9 +14,9 @@ function addTooltip(target, bitcoinAddress){
 		                 */
 		                //QR Code
 		                
-		                var content = 'Balance: ' + data.balance + 
-		                '<br/>Total Received: ' + data.totalReceived +
-		                '<br/>Total Sent: ' + data.totalSent +
+		                var content = 'Balance: ' + data.balance + " BTC" + 
+		                '<br/>Total Received: ' + data.totalReceived + " BTC" + 
+		                '<br/>Total Sent: ' + data.totalSent + " BTC" + 
 		                '<br/>Total Transactions: ' + data.txApperances;
 		                // Now we set the content manually (required!)
 		                api.set('content.text', content);

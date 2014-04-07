@@ -7,7 +7,7 @@
     "scripts": ["background.js"]
   },
   "web_accessible_resources": [
-    "bitchrome-address.png"
+    "bitchrome-48.png"
   ],
   "icons" : {
     "16" : "bitchrome-16.png",

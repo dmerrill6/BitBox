@@ -3,9 +3,6 @@
   "description": "Allows to quickly get information on Bitoin addresses in any Webpage",
   "version" : "1.0.2",
   "permissions": ["http://live.insight.is/"],
-  "background" : {
-    "scripts": ["background.js"]
-  },
   "web_accessible_resources": [
     "bitchrome-48.png"
   ],
@@ -14,26 +11,25 @@
     "48" : "bitchrome-48.png",
     "128" : "bitchrome-128.png"
   },
-
-  "content_scripts" : [
-  {
+  "content_scripts" : [{
     "matches" : [ 
       "http://*/*",
       "https://*/*"
     ],
-    "js" : ["bitcore.js","jquery-1.11.0.min.js",
+    "js" : [
+      "bitcore.js",
+      "jquery-1.11.0.min.js",
       "jquery.qtip.min.js",
       "jquery.qrcode-0.7.0.min.js",
       "contentscript.js" ,
       "content.js"
-      ],
-      "css" : [
-        "jquery.qtip.min.css",
-        "bitchrome.css"
-      ],
-      "run_at" : "document_idle",
-      "all_frames" : false
-    }
-  ],
+    ],
+    "css" : [
+      "jquery.qtip.min.css",
+      "bitchrome.css"
+    ],
+    "run_at" : "document_idle",
+    "all_frames" : false
+  }],
   "manifest_version": 2
 }

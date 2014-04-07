@@ -23,7 +23,7 @@ and violated the [Chrome Branding Guidlines](https://developer.chrome.com/websto
 Team
 ----
 
-* [Leo Wandersleb](http://www.linkedin.com/pub/leo-wandersleb/45/55/669) [giszmo@github](https://github.com/Giszmo)
+* [Leo Wandersleb](http://www.linkedin.com/pub/leo-wandersleb/45/55/669) ( [giszmo@github](https://github.com/Giszmo) )
 * [Daniel Merrill](https://github.com/dmerrill6)
 * [Mauricio Cajas](https://github.com/desarrollolibre)
 * [Sebastian Ulloa](https://github.com/seba.ulloa)

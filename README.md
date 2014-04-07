@@ -7,9 +7,7 @@ You can download this extension from the Chrome store or use these files directl
 
 1. Download the folder app
 
-1. Configure your chrom\[e|ium\]:
-
-    Tools -> Extensions -> Developer Mode -> Load unpacked extension
+1. Configure your chrom\[e|ium\]: `Tools -> Extensions -> Developer Mode -> Load unpacked extension -> pick the folder "app" from this package`
 
 History
 -------

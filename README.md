@@ -7,13 +7,18 @@ You can download this extension from the Chrome store or use these files directl
 
 1. Download the folder app
 
-1. Configure your chrom\[e|ium\]: Tools -> Extensions -> Developer Mode -> Load unpacked extension
+1. Configure your chrom\[e|ium\]:
+
+    Tools -> Extensions -> Developer Mode -> Load unpacked extension
 
 History
 -------
 
-This extension is the result of a Hackathon at the San Sebastian University in Santiago, Chile.
-We had about six hours to do it and the initial version still broke some pages and violated the [Chrome Branding Guidlines](https://developer.chrome.com/webstore/branding) so it stayed in the Chrome store for only some hours initially.
+This extension is the result of a Hackathon at the San Sebastian University in
+Santiago, Chile.
+
+We had about six hours to do it and the initial version still broke some pages
+and violated the [Chrome Branding Guidlines](https://developer.chrome.com/webstore/branding#logos) so it stayed in the Chrome store for only some hours initially.
 
 Team
 ----

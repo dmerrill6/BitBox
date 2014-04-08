@@ -1,6 +1,6 @@
 {
-  "name": "BitChrome",
-  "description": "Allows to quickly get information on Bitoin addresses in any Webpage",
+  "name": "BitBox",
+  "description": "Allows to quickly get information on Bitoin addresses in any webpage through a tooltip.",
   "version" : "1.0.4",
   "permissions": ["http://live.insight.is/"],
   "web_accessible_resources": [

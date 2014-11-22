@@ -3,7 +3,9 @@ function addTooltip(target, bitcoinAddress){
 		    content: {
 		        text: function(event, api) {
 		            $.ajax({
-		                url: "http://live.insight.is/api/addr/" + bitcoinAddress, // URL to the JSON file
+		            	// TODO: Leo 2014-11-22: The API changed. Is this the correct spot? Can't test it right now but this should be right:
+		            	url: "https://insight.bitpay.com/api/addr/" + bitcoinAddress, // URL to the JSON file
+		                // url: "http://live.insight.is/api/addr/" + bitcoinAddress, // URL to the JSON file
 		                type: 'GET', // POST or GET
 		                dataType: 'json' // Tell it we're retrieving JSON
 		            })

@@ -1,5 +1,5 @@
 
-BitChrome Chrome Extension for Bitcoin users
+BitBox Chrome Extension for Bitcoin users
 ============================================
 
 You can download this extension from the Chrome store or use these files directly:
@@ -17,6 +17,8 @@ Santiago, Chile.
 
 We had about six hours to do it and the initial version still broke some pages
 and violated the [Chrome Branding Guidlines](https://developer.chrome.com/webstore/branding#logos) so it stayed in the Chrome store for only some hours initially.
+
+It is now part of the Chrome store but if it works at all, it is Hackathon quality at best.
 
 Team
 ----
